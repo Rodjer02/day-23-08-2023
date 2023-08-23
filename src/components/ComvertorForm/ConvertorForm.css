@@ -1,0 +1,8 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.buttons {
+  border-radius: 10px;
+  overflow: hidden;
+}

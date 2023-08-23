@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./index.css";
+import FromThisCurrency from "./components/FromThisCurrency/FromThisCurrency";
+import InThisCurrency from "./components/InThisCurrency/InThisCurrency";
+import { useState } from "react";
 
 function App() {
+  const [currencies, setCurrencies] = useState([
+    { title: "RUB", id: 1 },
+    { title: "USD", id: 2 },
+    { title: "EUR", id: 3 },
+    { title: "GBP", id: 4 },
+  ]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="convertor">
+        <FromThisCurrency
+          currencies={currencies}
+          setCurrencies={setCurrencies}
+        />
+        <InThisCurrency currencies={currencies} setCurrencies={setCurrencies} />
+      </div>
     </div>
   );
 }
