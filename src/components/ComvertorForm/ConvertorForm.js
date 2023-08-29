@@ -1,20 +1,23 @@
 import Input from "../Input/Input";
 import RadioBtn from "../RadioBtn/RadioBtn";
+import "./ConvertorForm.css";
 
 export default function ConvertorForm({
-  currencies,
-  setCurrencies,
-  nameRadioBtn,
+  courses,
+  onClick,
+  activeBtn,
+  inputValue,
+  onChange,
 }) {
   return (
     <div className="form">
       <RadioBtn
         className="buttons"
-        currencies={currencies}
-        setCurrencies={setCurrencies}
-        nameRadioBtn={nameRadioBtn}
+        courses={courses}
+        onClick={onClick}
+        activeBtn={activeBtn}
       />
-      <Input />
+      <Input inputValue={inputValue} onChange={onChange} />
     </div>
   );
 }

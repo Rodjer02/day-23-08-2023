@@ -1,12 +1,23 @@
 import ConvertorForm from "../ComvertorForm/ConvertorForm";
 
-export default function FromThisCurrency({ currencies, setCurrencies }) {
+export default function FromThisCurrency({
+  courses,
+  activeBtn,
+  setActiveBtn,
+  courseInputOut,
+}) {
+  const onClick = (active, e) => {
+    setActiveBtn(active);
+  };
   return (
     <>
       <ConvertorForm
-        currencies={currencies}
-        setCurrencies={setCurrencies}
+        courses={courses}
+        activeBtn={activeBtn}
+        onClick={onClick}
         nameRadioBtn={"inThisCurrency"}
+        inputValue={courseInputOut}
+        onChange={() => {}}
       />
     </>
   );

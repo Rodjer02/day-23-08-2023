@@ -1,19 +1,20 @@
 import "./RadioBtn.css";
-export default function RadioBtn({ currencies, setCurrencies, nameRadioBtn }) {
+import { Button } from "@chakra-ui/react";
+export default function RadioBtn({ courses, onClick, activeBtn }) {
   return (
-    <>
-      {currencies.map((currency, i, arr) => (
-        <div className="form_radio_btn" key={currency.id}>
-          <input
+    <div className="btns">
+      {courses.map((currency, i, arr) => (
+        <div key={i}>
+          <Button
+            className={`${activeBtn === currency ? "active" : ""}`}
             style={{ padding: "20px 10px", border: "solid 1px black" }}
-            type="radio"
-            id={nameRadioBtn + currency.id}
-            value={currency.title}
-            name={nameRadioBtn}
-          />
-          <label htmlFor={nameRadioBtn + currency.id}>{currency.title}</label>
+            onClick={() => onClick(currency)}
+            colorScheme="gray"
+          >
+            {currency}
+          </Button>
         </div>
       ))}
-    </>
+    </div>
   );
 }

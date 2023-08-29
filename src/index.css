@@ -16,6 +16,7 @@ code {
   display: flex;
   justify-content: space-between;
   width: 700px;
+  height: max-content;
   padding: 20px;
   border-radius: 20px;
   background-color: #fff;
