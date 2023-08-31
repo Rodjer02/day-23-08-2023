@@ -10,15 +10,13 @@ export default function FromThisCurrency({
     setActiveBtn(active);
   };
   return (
-    <>
-      <ConvertorForm
-        courses={courses}
-        activeBtn={activeBtn}
-        onClick={onClick}
-        nameRadioBtn={"inThisCurrency"}
-        inputValue={courseInputOut}
-        onChange={() => {}}
-      />
-    </>
+    <ConvertorForm
+      courses={courses}
+      activeBtn={activeBtn}
+      onClick={onClick}
+      nameRadioBtn={"inThisCurrency"}
+      inputValue={courseInputOut}
+      onChange={() => {}}
+    />
   );
 }

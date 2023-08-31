@@ -43,10 +43,8 @@ function App() {
           activeBtnOut={activeBtnOut}
           courses={courses}
           currencies={currencies}
-          setCurrencies={setCurrencies}
           setActiveBtnOut={setActiveBtnOut}
           activeBtnIn={activeBtnIn}
-          setActiveBtnIn={setActiveBtnIn}
           courseInputIn={courseInputIn}
           setCourseInputIn={setCourseInputIn}
           setCourseInputOut={setCourseInputOut}
@@ -55,8 +53,6 @@ function App() {
           courses={courses}
           activeBtn={activeBtnIn}
           setActiveBtn={setActiveBtnIn}
-          currencies={currencies}
-          setCurrencies={setCurrencies}
           courseInputOut={courseInputOut}
         />
       </div>

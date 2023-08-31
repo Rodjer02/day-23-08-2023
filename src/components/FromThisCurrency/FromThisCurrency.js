@@ -34,14 +34,12 @@ export default function FromThisCurrency({
     }
   };
   return (
-    <>
-      <ConvertorForm
-        courses={courses}
-        activeBtn={activeBtnOut}
-        onClick={onClick}
-        inputValue={courseInputIn}
-        onChange={onChange}
-      />
-    </>
+    <ConvertorForm
+      courses={courses}
+      activeBtn={activeBtnOut}
+      onClick={onClick}
+      inputValue={courseInputIn}
+      onChange={onChange}
+    />
   );
 }
